@@ -1,0 +1,32 @@
+.question-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Spacing between question sections */
+    margin-bottom: 20px;
+  }
+  
+  .question-form > div {
+    flex: 1 1 300px; /* Flexible width, minimum 300px */
+    background-color: #bf9d84;
+    border-radius: 5px;
+    padding: 15px;
+  }
+  
+  .question-form label {
+    font-family:Comic Sans MS, Comic Sans, cursive;
+    font-weight: bold;
+    margin-bottom: 5px;
+    
+    display: block;
+  }
+  
+  .question-form input[type="text"],
+  .question-form input[type="number"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    background-color: #f5e2d5;
+    border-radius: 3px;
+    font-size: 16px;
+  }
+  

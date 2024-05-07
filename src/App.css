@@ -1,0 +1,479 @@
+body {
+  background-image: url("/Users/aswath/Desktop/AI-Exam-Proctoring-System-main/app1/dataset/web-design-2906159_640.jpeg"); /* Replace with your image path */
+  background-size: cover; /* Initial cover to ensure image fills viewport */
+  background-position: center; /* Center the image */
+  /* Additional styles for cropping */
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Fixes the image in place during scroll */
+  -webkit-background-size: cover;
+  opacity:0.9;
+}
+
+
+
+
+
+
+
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  height: 400px; /* Increase the height as desired */
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #e0d3c8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: absolute; /* Position the container */
+  top: 50%; /* Align the top of the container to the middle of the viewport */
+  left: 75%; /* Align the left of the container to the middle of the viewport */
+  transform: translate(-50%, -50%); /* Center the container horizontally and vertically */
+}
+
+.login-container h1 {
+  font-size: 35px;
+  margin-bottom: 40px;
+  color: #4d2808;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+
+.login-container input[type="text"]::placeholder,
+.login-container input[type="password"]::placeholder {
+  color: #e6ad7c;
+}
+
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #7d4819;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #4f2a0a;
+}
+
+.login-container button:focus {
+  outline: none;
+}
+
+.login-container button:active {
+  background-color: #4f2a0a;
+  transform: translateY(1px);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* App.css */
+
+/* Add a container for the buttons */
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 200px; /* Adjust top margin for spacing */
+}
+
+
+/* Style for the buttons */
+.btn-teacher,
+.btn-student,
+.btn-uploadtest,
+.btn-viewresults {
+  padding: 40px 100px; /* Increase padding for larger buttons */
+  margin-bottom: 40px;
+  width:400px; /* Adjust space between buttons */
+  margin-right: 100px; /* Adjust space between buttons and right edge */
+  background-color: #e0d3c8;
+  border: 2px black;
+  border-radius: 12px; /* Increase border radius for rounded corners */
+  color: #ad6f51;
+  font-size: 32px; /* Increase font size for larger text */
+  font-family: "Lucida Console", "Courier New", monospace;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+
+.btn-teacher:hover,
+.btn-student:hover,
+.btn-uploadtest:hover,
+.btn-viewresults:hover {
+  background-color: #bf9784;
+  color:black;
+}
+
+.btn-teacher:focus,
+.btn-student:focus,
+.btn-uploadtest:focus,
+.btn-viewresults:focus {
+  outline: none;
+}
+
+.btn-teacher:active,
+.btn-student:active,
+.btn-uploadtest:active,
+.btn-viewresults:active {
+  transform: translateY(1px);
+}
+
+
+  
+
+
+.results-container {
+/* Optional background image */
+  background-color: #f7e0d7;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 1; 
+  padding: 15px;
+  border-radius: 5px;
+  margin: 10px auto; /* Center the container horizontally */
+  max-width: 800px; /* Optional: Set a maximum width */
+}
+.results-container h2{
+  font-family:OCR A Std, monospace;
+  text-align:center;
+  color:#9e3109;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Remove borders between cells */
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #240d05; /* Add thin borders to cells */
+  text-align: center;
+  font-family:Andale Mono, monospace; 
+  background-color: #d9ae9e;
+}
+
+th {
+  font-size: 20px;
+  text-align:center;
+   /* Light gray background for headers */
+   background-color: #ad6f58;
+  font-weight: bold;
+  color:#240d05;
+}
+
+
+
+
+
+
+.upload-form {
+  display: flex; /* Enable flexbox layout for form elements */
+  flex-direction: column; /* Stack elements vertically */
+  align-items:left; /* Align elements to the right side */
+  width: 350px; /* Set form width */
+  margin: 50px; /* Add margin for spacing */
+  border: 1px solid #ddd; /* Add a thin border */
+  border-radius: 5px; /* Add rounded corners */
+  padding: 20px; /* Add padding for better spacing */
+  position: fixed; /* Fix the form to the screen */
+  /* Adjust these properties to control position */
+  top: 100px;  /* Set top position (adjust as needed) */
+  right: 100px;  /* Set right position (adjust as needed) */
+  /* Alternatively, use bottom and left properties for different placement */
+  background-color: #edd0bb; /* Set background color */
+}
+
+
+.upload-form label {
+  margin-bottom: 5px; /* Add spacing below labels */
+  display: block;
+  text-align:left; /* Make labels occupy full width */
+}
+
+.upload-form input[type="number"],
+.upload-form input[type="text"] {
+  width: 100%; /* Set input width to 100% of form width */
+  padding: 5px; /* Add padding for better user experience */
+  border: 1px solid #ccc; /* Add a thin border to inputs */
+  border-radius: 3px; /* Add rounded corners */
+  margin-bottom: 10px; 
+  color:#401c03;/* Add spacing between input fields */
+}
+
+.upload-form button {
+  width:350px;
+  background-color: #7a3c10; /* Green background color */
+  color: #e8d2c3; /* White text color */
+  padding: 10px 20px; /* Add padding for button size */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add rounded corners */
+  cursor: pointer; /* Indicate clickable element */
+}
+
+.upload-form button:hover {
+  background-color: #a8846a;
+  color: black;
+
+}
+
+
+
+
+
+
+.test-names {
+  display: flex; /* Maintain flexbox for potential future changes */
+  flex-direction: column; /* Arrange buttons vertically */
+  align-items: center; /* Center buttons horizontally within the container */
+  margin: 10px 0; /* Add some margin for spacing */
+}
+
+.test-names h2{
+  font-family:Andale Mono, monospace;
+  font-size:20px;
+  color:white;
+}
+
+.test-button {
+  /* Base styles remain the same */
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  width:250px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out; /* Maintain transition effect */
+
+  /* Default button style remains the same */
+  background-color: #f0d3c0;
+  color: #333;
+  font-family:Andale Mono, monospace;
+}
+
+
+.test-button:hover {
+  /* Hover effect remains the same */
+  background-color: #805f49;
+  color:white;
+}
+
+
+
+/* Add margin to each button using a separate selector */
+.test-names button {
+  margin-bottom: 10px; /* Add margin between buttons */
+}
+
+
+
+
+
+
+
+
+.test-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%; /* Adjust width for right half of the screen */
+  margin-top: 30px;
+  height:500px;
+  margin-left: auto; /* Move to the right side of the screen */
+  margin-right: 60px; /* Add some margin for spacing */
+  padding: 20px;
+  background-color: #e8d5c8;
+  border-radius: 18px;
+  border:7px solid #381a07;
+}
+
+/* Time Remaining */
+.time-left {
+  margin-top: 10px;
+  text-align: right;
+  font-weight: bold;
+  /* Adjust position within container (optional): */
+  /* margin-top: 10px;  */
+}
+
+/* Question and Options Section */
+.question {
+  font-size: 18px;
+}
+
+.question-text {
+  /* Adjust styles for question text (optional) */
+  line-height: 2.5;
+  text-align:left;
+  font-family: Georgia, serif;
+  font-size:20px;
+   /* Adjust line spacing for better readability */
+}
+
+.options-list {
+  display: flex;
+  flex-wrap: wrap; /* Wrap options to next line */
+  justify-content: space-between;
+  margin-top: 20px; /* Adjust spacing between options and questions */
+}
+
+.option-button {
+  width: calc(50% - 5px); /* Two options per row */
+  padding: 15px 20px;
+  border: 2px solid #804016;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 15px; /* Adjust spacing between options */
+}
+.option-button:hover{
+  color:#632305;
+}
+
+.option-button.selected {
+  background-color: #8a6248; /* Change color for selected answer */
+  color: white;
+}
+
+/* Navigation Buttons */
+.next,
+.previous,
+.end {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.next {
+  /* Adjust styles for "Next" button (optional) */
+  background-color: #3b1c08; /* Green color (optional) */
+  color: #fff;
+}
+
+.next:hover {
+  /* Adjust styles for "Next" button (optional) */
+  background-color: #d49066; /* Green color (optional) */
+  color: black;
+}
+
+.previous {
+  background-color:#3b1c08;
+  color: #fff;
+  /* Adjust styles for "Previous" button (optional) */
+}
+
+.previous:hover {
+  /* Adjust styles for "Next" button (optional) */
+  background-color: #d49066; /* Green color (optional) */
+  color: black;
+}
+
+.end {
+  background-color: #dc3545; /* Red color (optional) */
+  color: #fff;
+}
+.end:hover {
+  /* Adjust styles for "Next" button (optional) */
+  background-color: #e37554; /* Green color (optional) */
+  color: black;
+}
+
+/* Question Navigation */
+.question-nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px; /* Adjust spacing from questions */
+}
+
+.question-nav button {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 5px; 
+  background-color: #d69c81;/* Add some spacing between buttons */
+}
+
+.question-nav button.active {
+  background-color: #705a4f; /* Blue color for active question (optional) */
+  color: #fff;
+}
+
+.question-nav button:hover {
+  background-color:#f08a54; /* Blue color for active question (optional) */
+  color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+.test-over-container {
+  position: fixed;
+  top: 50%;
+  right: 20px; /* Adjust as needed */
+  transform: translateY(-50%);
+  width: 500px; /* Adjust the width as needed */
+  padding: 20px;
+  height:100px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.test-over-container h2 {
+  margin-top: 0;
+}
+
+.test-over-container p {
+  margin-bottom: 10px;
+}
+
+.test-over-container button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #301508;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.test-over-container button:hover {
+  background-color: #d69c81;
+  color:black;
+}
